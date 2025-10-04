@@ -1,57 +1,65 @@
-<mxGraphModel dx="1426" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+<mxGraphModel dx="1106" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
   <root>
     <mxCell id="0"/>
     <mxCell id="1" parent="0"/>
     <mxCell id="2" value="שירות הדואר" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-      <mxGeometry x="40" y="320" width="120" height="60" as="geometry"/>
+      <mxGeometry x="340" y="40" width="140" height="60" as="geometry"/>
     </mxCell>
-    <mxCell id="3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="2" target="4">
+    <mxCell id="3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="4">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="40" y="470" as="sourcePoint"/>
-        <mxPoint x="90" y="420" as="targetPoint"/>
+        <mxPoint x="400" y="140" as="sourcePoint"/>
+        <mxPoint x="410" y="190" as="targetPoint"/>
       </mxGeometry>
     </mxCell>
-    <mxCell id="4" value="Ingress API<div><span style=&quot;font-size: 10px&quot;>אימות חתימה,</span><br><span style=&quot;font-size: 10px&quot;>תקינות, רעננות,</span><br><span style=&quot;font-size: 10px&quot;>Idempotency</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-      <mxGeometry x="200" y="320" width="140" height="60" as="geometry"/>
+    <mxCell id="4" value="Webhook Event<div><span style=&quot;font-size: 10px&quot;>(Delivered / Attempt Failed / Sorted)</span></div>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="370" y="110" width="100" height="30" as="geometry"/>
     </mxCell>
-    <mxCell id="5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="4" target="6">
+    <mxCell id="5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="6">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="180" y="470" as="sourcePoint"/>
-        <mxPoint x="230" y="420" as="targetPoint"/>
+        <mxPoint x="400" y="190" as="sourcePoint"/>
+        <mxPoint x="410" y="240" as="targetPoint"/>
       </mxGeometry>
     </mxCell>
-    <mxCell id="6" value="Queue<div><span style=&quot;font-size: 10px&quot;>(Azure SB / RabbitMQ /</span><br><span style=&quot;font-size: 10px&quot;>SQL Outbox)</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-      <mxGeometry x="380" y="320" width="140" height="60" as="geometry"/>
+    <mxCell id="6" value="Ingress API<div><span style=&quot;font-size: 10px&quot;>אימות חתימה,</span><br><span style=&quot;font-size: 10px&quot;>תקינות, רעננות,</span><br><span style=&quot;font-size: 10px&quot;>Idempotency</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="340" y="150" width="140" height="60" as="geometry"/>
     </mxCell>
-    <mxCell id="7" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="6" target="8">
+    <mxCell id="7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="6" target="10">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="360" y="470" as="sourcePoint"/>
-        <mxPoint x="410" y="420" as="targetPoint"/>
+        <mxPoint x="400" y="260" as="sourcePoint"/>
+        <mxPoint x="410" y="310" as="targetPoint"/>
       </mxGeometry>
     </mxCell>
-    <mxCell id="8" value="Worker<div><span style=&quot;font-size: 10px&quot;>עיבוד אירוע,</span><br><span style=&quot;font-size: 10px&quot;>מניעת כפילויות,</span><br><span style=&quot;font-size: 10px&quot;>עדכון DB</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-      <mxGeometry x="560" y="320" width="140" height="60" as="geometry"/>
+    <mxCell id="10" value="Worker<div><span style=&quot;font-size: 10px&quot;>עיבוד אירוע,</span><br><span style=&quot;font-size: 10px&quot;>מניעת כפילויות,</span><br><span style=&quot;font-size: 10px&quot;>עדכון DB</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="340" y="350" width="140" height="60" as="geometry"/>
     </mxCell>
-    <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="8" target="10">
+    <mxCell id="11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="10" target="12">
       <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="540" y="470" as="sourcePoint"/>
-        <mxPoint x="590" y="420" as="targetPoint"/>
+        <mxPoint x="400" y="460" as="sourcePoint"/>
+        <mxPoint x="410" y="510" as="targetPoint"/>
       </mxGeometry>
     </mxCell>
-    <mxCell id="10" value="לוח הבקרה<div><span style=&quot;font-size: 10px&quot;>סטטוס בזמן אמת:</span><br><span style=&quot;font-size: 10px&quot;>• הודעות שהתקבלו</span><br><span style=&quot;font-size: 10px&quot;>• הודעות בעיבוד</span><br><span style=&quot;font-size: 10px&quot;>• הודעות ב-DLQ</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="740" y="320" width="140" height="60" as="geometry"/>
+    <mxCell id="12" value="לוח הבקרה<div><span style=&quot;font-size: 10px&quot;>סטטוס בזמן אמת:</span><br><span style=&quot;font-size: 10px&quot;>• הודעות שהתקבלו</span><br><span style=&quot;font-size: 10px&quot;>• הודעות בעיבוד</span><br><span style=&quot;font-size: 10px&quot;>• הודעות ב-DLQ</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="340" y="450" width="140" height="60" as="geometry"/>
     </mxCell>
-    <mxCell id="11" value="DLQ<div><span style=&quot;font-size: 10px&quot;>(Dead Letter Queue)</span></div>" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-      <mxGeometry x="380" y="420" width="140" height="60" as="geometry"/>
+    <mxCell id="13" value="Queue" style="shape=mxgraph.azure.service_bus;html=1;pointerEvents=1;dashed=0;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="220" y="250" width="50" height="50" as="geometry"/>
     </mxCell>
-    <mxCell id="12" value="אם שגיאה באימות/תור" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="4" target="11">
-      <mxGeometry width="50" height="50" relative="1" as="geometry">
-        <mxPoint x="270" y="470" as="sourcePoint"/>
-        <mxPoint x="320" y="420" as="targetPoint"/>
-      </mxGeometry>
+    <mxCell id="14" value="RabbitMQ" style="shape=mxgraph.rabbitmq.rabbitmq;html=1;pointerEvents=1;dashed=0;fillColor=#FF6600;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="340" y="250" width="50" height="50" as="geometry"/>
     </mxCell>
-    <mxCell id="13" value="Webhook Event<div><span style=&quot;font-size: 10px&quot;>(Delivered / Attempt Failed / Sorted)</span></div>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-      <mxGeometry x="160" y="290" width="100" height="20" as="geometry"/>
+    <mxCell id="15" value="SQL Outbox" style="image;html=1;labelBackgroundColor=#ffffff;image=img/lib/clip_art/computers/Database_128x128.png;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="470" y="250" width="50" height="50" as="geometry"/>
     </mxCell>
-  </root>
-</mxGraphModel>
+    <mxCell id="16" value="<font style=&quot;font-size: 10px&quot;>Azure Service Bus</font>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="215" y="305" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="17" value="<font style=&quot;font-size: 10px&quot;>RabbitMQ</font>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="335" y="305" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="18" value="<font style=&quot;font-size: 10px&quot;>SQL Outbox</font>" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="465" y="305" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="19" value="DLQ" style="shape=mxgraph.azure.dead_letter_queue;html=1;pointerEvents=1;dashed=0;fillColor=#f8cecc;strokeColor=#b85450;verticalLabelPosition=bottom;verticalAlign=top;align=center;spacingTop=3;" vertex="1" parent="1">
+      <mxGeometry x="590" y="250" width="50" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="20" value="<font style=&quot;font-size: 10px&quot;>Dead Letter Queue</font>" style="text;
