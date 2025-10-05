@@ -46,16 +46,13 @@
         <mxCell id="18" value="SQL Outbox\n/ Service Broker" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="465" y="345" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="19" value="" style="shape=mxgraph.azure.dead_letter_queue;html=1;pointerEvents=1;dashed=0;fillColor=#f8cecc;strokeColor=#b85450;verticalLabelPosition=bottom;verticalAlign=top;align=center;spacingTop=3;" parent="1" vertex="1">
-          <mxGeometry x="590" y="290" width="50" height="50" as="geometry" />
-        </mxCell>
         <mxCell id="20" value="DLQ\n(Dead Letter Queue)" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="585" y="345" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="21" value="אם שגיאה באימות" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#ff0000;strokeWidth=2;fontSize=10;" parent="1" source="6" target="19" edge="1">
+        <mxCell id="21" value="אם שגיאה באימות" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#ff0000;strokeWidth=2;fontSize=10;" parent="1" source="6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="500" y="240" as="sourcePoint" />
-            <mxPoint x="550" y="190" as="targetPoint" />
+            <mxPoint x="590" y="315" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="note" value="הליבה העסקית זהה בכל תצורה – רק המתאם משתנה" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
